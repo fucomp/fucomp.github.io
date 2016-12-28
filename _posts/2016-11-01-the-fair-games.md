@@ -20,6 +20,13 @@ I have both of those books on my shelf and have often wondered what it was like 
 
 To actually find out what's possible I'll need a pair of machines to hack.
 
-With the opensource hypervisor [QEMU](http://wiki.qemu.org/Main_Page), some clever folks over at the Raspberry Pi forums [1](https://www.raspberrypi.org/forums/viewtopic.php?p=123023#p123023),[2](https://www.raspberrypi.org/forums/viewtopic.php?p=123049#p123049), and the Windows 9x Project I plan to spin up a pair of images.
+With the opensource hypervisor [QEMU](http://wiki.qemu.org/Main_Page) and some reading of old VM forums I managed to fairly easily spin up a pair of machines on a stock RPi 3 running Raspbian for Windows 95 with something like:
+
+```
+qemu-img create W95 $(( 1024 * 512 ))
+qemu-system-i386 -fda FDos.img -cdrom W95_PLUS.iso -hda W95 -m $(( 1024 * 64 )) -boot a
+``` 
+
+Bear in mind that it's necessary to format the hda with fdisk from the FreeDos bootdisk as I couldn't make it work using the Windows95b.img file that's available from [AllBootdisks](http://www.allbootdisks.com/download/95.html). You'll have to have physical access to the machine or a combination of SSH and VNC to complete the operation as you can't script the install proccess. Yet.
 
 There's very little sense in exposing my internal network to a pair of old, untouched, unpatched OSs, virtualised or not so I plan to sandbox them on the same network that doesn't have an Internet exit node. This will be provided by an old DSL router I was left with after changing providers. Which was very nice of them. I may even packet sniff my way onto that network to give it the full flavour.
