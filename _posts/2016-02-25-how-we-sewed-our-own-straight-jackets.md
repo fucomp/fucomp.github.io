@@ -35,4 +35,10 @@ There are wifi Adblockers available for mobile devices too, they will also speed
 
 Yes. Sort of. A lot of this technology is in it’s infancy. So much so in fact that FBIA and AMP seem to have got the drop on Mozilla and other open source heavy hitters. One hopeful is the [CPP](https://timkadlec.com/2016/02/a-standardized-alternative-to-amp/).
 
-This is an open note and I will be adding more points as I think of them.
+## Addendumdumb
+
+Since I originally wrote this way back in February of 2016 and it is now July 2017 a few things have happened. Firstly Mozilla, rather than create yet another dead-end technology (sorry Moz, it's true) they just opted to buy [Pocket](https://getpocket.com/) which allows users to save articles for reading later and has a built in reading view that reduces load by blocking tracking and excessive ads etc which addresses many of the arguments that were the driving force behind creating AMP in the first place. Another is that there is finally an alternative to AMP/FBIA in the form of [LWP](https://github.com/boramalper/light-web-pages). This seems like a more viable alternative rather than a series of gentlemen's agreements that server admins and developers are supposed to shake hands and agree on, sorrynotsorry CPP. 
+
+I'm sure this isn't the end of this article.
+
+This is an open note and I will be adding more points as I think of them or news chages.
